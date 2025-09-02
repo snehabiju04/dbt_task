@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: stg_clean_data
+    columns:
+      - name: invoice_no
+        tests:
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: quantity
+        tests:
+          - not_null
+      - name: unit_price
+        tests:
+          - not_null
+      - name: invoice_date
+        tests:
+          - not_null
+      - name: stock_code
+        tests:
+          - not_null

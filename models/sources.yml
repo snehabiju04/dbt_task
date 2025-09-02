@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: dbttask
+    description: This is the dataset which would be used here
+    database: dbtpractice-470116
+    schema: dbttask
+    tables:
+      - name: data
+        description: This is the table which stores our data to be used further
