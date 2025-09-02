@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: stg_clean_data
+  - name: clean_orders
     columns:
       - name: invoice_no
         tests:

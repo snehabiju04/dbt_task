@@ -44,6 +44,3 @@ models:
       staging:
         +schema: staging
         +materialized: table
-      staging:           # folder name
-      +schema: staging   # BigQuery dataset name
-      +materialized: table

@@ -1,9 +1,9 @@
 with t_sales as(
-    select sum(revenue) as total_sales from {{ref("fct_data")}}
+    select sum(revenue) as total_sales from {{ref("fact_data")}}
 ),
 order_revenue as (
     select invoice_no, sum(revenue) as order_total
-    from {{ ref('fct_data') }} group by invoice_no
+    from {{ ref('fact_data') }} group by invoice_no
 ),
 aov_cte as(
     select avg(order_total) as aov from order_revenue
