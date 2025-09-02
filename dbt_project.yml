@@ -41,6 +41,9 @@ models:
     # Applies to all files under models/example/
     models:
       +materialized: table
+      staging:
+        +schema: staging
+        +materialized: table
       staging:           # folder name
       +schema: staging   # BigQuery dataset name
       +materialized: table
