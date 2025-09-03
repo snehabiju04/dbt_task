@@ -5,18 +5,30 @@ models:
       - name: invoice_no
         tests:
           - not_null
+          - dbt_utils.type_equal:
+              data_type: string
       - name: customer_id
         tests:
           - not_null
+          - dbt_utils.type_equal:
+              data_type: INT64
       - name: quantity
         tests:
           - not_null
+          - dbt_utils.type_equal:
+              data_type: INT64
       - name: unit_price
         tests:
           - not_null
+          - dbt_utils.type_equal:
+              data_type: float64
       - name: invoice_date
         tests:
           - not_null
+          - dbt_utils.type_equal:
+              data_type: timestamp
       - name: stock_code
         tests:
           - not_null
+          - dbt_utils.type_equal:
+              data_type: string
