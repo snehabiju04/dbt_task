@@ -1,0 +1,28 @@
+version: 2
+models:
+  - name: orders
+    description: Staging model for orders table
+    config:
+      unique_key: order_id
+    columns:
+      - name: order_id
+        description: Unique identifier for each order
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: Identifier for the customer who placed the order.
+        tests:
+          - not_null
+      - name: order_status
+        description: Current status of the order (e.g., delivered, shipped, canceled). Defaults to 'Unknown' if null
+      - name: order_purchase_timestamp
+        description: Timestamp when the order was placed.
+        tests:
+          - not_null
+      - name: order_approved_at
+        description: Timestamp when the order was approved. 
+      - name: order_delivered_timestamp
+        description: Timestamp when the order was handed over to the customer.
+      - name: order_estimated_delivery_date
+        description: Estimated delivery date for the order.

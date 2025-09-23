@@ -1,9 +1,26 @@
 version: 2
+
 sources:
-  - name: dbttask
-    description: This is the dataset which would be used here
-    database: dbtpractice-470116
-    schema: dbttask
+  - name: google_analytics_sample
+    description: "This is the GA sample dataset which would be used here"
+    database: bigquery-public-data
+    schema: google_analytics_sample
     tables:
-      - name: data
-        description: This is the table which stores our data to be used further
+      - name: ga_sessions
+        identifier: "ga_sessions_201*"
+        description: "This includes all the date shard tables of the dataset"
+  - name: ecommerce
+    database: dbtpractice-470116
+    schema: dbt_task2
+    tables:
+      - name: customers
+        description: Contains info about the customer and their address
+      - name: orders
+        description: Contains info about the order details
+      - name: order_items
+        description: Contains info about the product ordered
+      - name: payments
+        description: Contains info about the payment details of each order id
+      - name: products
+        description: Contains product details
+      

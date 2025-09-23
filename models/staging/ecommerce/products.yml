@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: products      
+    description: Staging model for products table.
+    config:
+     unique_key: product_id  
+    columns:
+      - name: product_id
+        description: Unique identifier for each product
+        tests:
+          - not_null
+          - unique
+      - name: product_category_name
+        description: Category name of the product.
+      - name: product_weight_g
+        description: Weight of the product in grams.
+      - name: product_length_cm
+        description: Length of the product in cm. 
+      - name: product_height_cm
+        description: Height of the product in cm. 

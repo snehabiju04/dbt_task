@@ -1,0 +1,16 @@
+version: 2
+models:
+  - name: fact_finances
+    description: "A fact table containing financial transactions for the e-commerce platform."
+    columns:
+      - name: order_id
+        description: Identifier for the order associated with the transaction
+        tests:
+          - not_null
+          - unique
+      - name: payment_type
+        description: Type of payment used in the transaction (e.g., credit card, voucher)
+      - name: payment_installments
+        description: Number of installments for the payment
+      - name: payment_value
+        description: Total value of the payment

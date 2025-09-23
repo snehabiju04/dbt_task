@@ -1,0 +1,19 @@
+version: 2
+models:
+  - name: customers
+    description: Staging model for customers table
+    config:
+      unique_key: customer_id
+    columns:
+      - name: customer_id
+        description: Unique identifier for each customer.
+        tests:
+          - not_null
+          - unique
+      - name: customer_zip_code_prefix
+        description: Zip code of the customer.
+      - name: customer_city
+        description: City name of the customer.
+      - name: customer_state  
+        description: State of the customer.
+        

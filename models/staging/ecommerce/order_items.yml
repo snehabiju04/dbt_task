@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: order_items
+    description: "Staging model for order items table."
+    config:
+      unique_key: order_id 
+    columns:
+      - name: order_id
+        description: Unique identifier of the order to which this item belongs.
+        tests:
+          - not_null
+      - name: product_id
+        description: Unique identifier of the product in the order item.
+        tests:
+          - not_null
+      - name: seller_id
+        description: Unique identifier of the seller who sold the product. 
+      - name: price
+        description: Price of the product in the order.
+      - name: shipping_charges
+        description: Shipping charges for the product in the order.
