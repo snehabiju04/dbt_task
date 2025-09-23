@@ -35,7 +35,7 @@ vars:
   prod_ptrn: 'products%'
   pay_ptrn: 'payments%'
   exclude_ptrn: ''  
-
+  
 
   ECOMMERCE: true
   GASESSIONS: false
