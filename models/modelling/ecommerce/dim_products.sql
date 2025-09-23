@@ -1,0 +1,12 @@
+{% if var("ECOMMERCE") %} 
+ {{ config(enabled=True) }}
+{% else %}
+ {{ config(enabled=False) }} 
+{% endif %}
+
+select distinct product_id,
+    product_category_name,
+    product_weight_g,
+    product_length_cm,
+    product_height_cm
+    from {{ ref('products') }}

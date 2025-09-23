@@ -1,22 +1,19 @@
 version: 2
 models:
-  - name: clean_orders
+  - name: ga_session_table
     columns:
-      - name: invoice_no
+      - name: session_id
         tests:
           - not_null
-      - name: customer_id
+      - name: session_no
         tests:
           - not_null
-      - name: quantity
+      - name: visitor_id
         tests:
           - not_null
-      - name: unit_price
+      - name: parsed_date
         tests:
           - not_null
-      - name: invoice_date
-        tests:
-          - not_null
-      - name: stock_code
+      - name: t_revenue
         tests:
           - not_null

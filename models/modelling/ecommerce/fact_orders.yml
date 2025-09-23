@@ -1,0 +1,32 @@
+version: 2
+models:
+  - name: fact_orders
+    description: A fact table containing order information for the e-commerce platform.
+    columns:
+      - name: order_id
+        description: order identifier
+        tests:
+          - not_null
+      - name: customer_id
+        description: Identifier for the customer who placed the order
+        tests:
+          - not_null
+      - name: product_id
+        description: Identifier for the product ordered
+        tests:
+          - not_null
+      - name: product_category_name
+        description: Name of the product category
+      - name: price
+        description: Price of the product ordered
+      - name: shipping_charges
+        description: Shipping charges for the order
+      - name: order_status    
+        description: Status of the order (e.g., delivered, shipped, canceled)
+      - name: order_date
+        description: Date when the order was purchased
+      - name: payment_type
+        description: Payment method used for the order (e.g., credit card, voucher)
+      - name: payment_value
+        description: Amount paid for the order
+      

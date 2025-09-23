@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: payments
+    description: Staging model for payments table
+    config:
+      unique_key: order_id
+    columns:
+      - name: order_id
+        description: Unique identifier of the order for which the payment was made
+        tests:
+          - not_null
+          - unique
+      - name: payment_type
+        description: Method of payment used for the order. 
+      - name: payment_installments
+        description: Number of installments for the payment.
+      - name: payment_value
+        description: Total value of the payment. 

@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: dim_customers
+    description: "A dimension table containing customer information for the e-commerce platform."
+    columns:
+      - name: customer_id
+        description: Unique identifier for each customer
+        tests:
+          - not_null
+          - unique
+      - name: customer_zip_code_prefix
+        description: Customer's zip code prefix
+        tests:
+          - not_null
+      - name: customer_city
+        description: Customer's city
+        tests:
+          - not_null
+      - name: customer_state
+        description: Customer's state
+        tests:
+          - not_null
